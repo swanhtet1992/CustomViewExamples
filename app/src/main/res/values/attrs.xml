@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="SimpleView">
+    <attr name="shape" format="enum">
+      <enum name="circle" value="0" />
+      <enum name="square" value="1" />
+    </attr>
+
+    <attr name="dim" format="dimension" />
+
+    <attr name="simple_color" format="color" />
+  </declare-styleable>
+</resources>

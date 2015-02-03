@@ -11,27 +11,27 @@ import android.view.View;
 /**
  * @author SH (swanhtet@nexlabs.co)
  */
-public class SimpleView extends View {
+public class CustomShape extends View {
 
   private float mDim;
   private int mShape, mColor;
   private Paint mPaint;
 
   final int CIRCLE = 0;
-  final int SQUARE = 1;
+  final int RECTANGLE = 1;
 
-  public SimpleView(Context context, AttributeSet attrs) {
+  public CustomShape(Context context, AttributeSet attrs) {
     super(context, attrs);
 
     TypedArray attributes = null;
 
     try {
       mPaint = new Paint();
-      attributes = context.obtainStyledAttributes(attrs, R.styleable.SimpleView);
+      attributes = context.obtainStyledAttributes(attrs, R.styleable.CustomShape);
 
-      mDim = attributes.getDimension(R.styleable.SimpleView_dim, 20f);
-      mShape = attributes.getInteger(R.styleable.SimpleView_shape, 0);
-      mColor = attributes.getInteger(R.styleable.SimpleView_simple_color, 0);
+      mDim = attributes.getDimension(R.styleable.CustomShape_dimen, 20f);
+      mShape = attributes.getInteger(R.styleable.CustomShape_shape, 0);
+      mColor = attributes.getInteger(R.styleable.CustomShape_custom_color, 0);
     } finally {
       if (attributes != null) {
         attributes.recycle();
@@ -50,7 +50,7 @@ public class SimpleView extends View {
       case CIRCLE:
         canvas.drawCircle(mDim, mDim, mDim, mPaint);
         break;
-      case SQUARE:
+      case RECTANGLE:
         canvas.drawRect(0, 0, mDim, mDim, mPaint);
         break;
     }

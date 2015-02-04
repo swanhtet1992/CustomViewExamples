@@ -24,4 +24,12 @@
     app:dimen="200dp"
     app:shape="rectangle" />
 
+  <com.swanhtetaung.android.customviewexamples.CircleTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:circle_color="#ffb47d23"
+    app:label="H"
+    app:label_color="#fff"
+    app:label_size="50" />
+
 </LinearLayout>

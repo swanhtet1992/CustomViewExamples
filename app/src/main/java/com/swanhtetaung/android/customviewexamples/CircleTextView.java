@@ -78,13 +78,23 @@ public class CircleTextView extends View {
 
   public void setCircleColor(int color) {
     this.mCircleColor = color;
+
+    // redraw the view with new values
+    invalidate();
+    requestLayout();
   }
 
   public void setTextColor(int color) {
     this.mTextColor = color;
+
+    invalidate();
+    requestLayout();
   }
 
   public void setText(String text) {
     this.mText = text;
+
+    invalidate();
+    requestLayout();
   }
 }
